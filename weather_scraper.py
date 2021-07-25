@@ -27,7 +27,10 @@ FIND_FIRST_DATE = config.FIND_FIRST_DATE
 def scrap_station(weather_station_url):
 
     session = requests.Session()
-    timeout = 5
+    a = requests.adapters.HTTPAdapter(max_retries=10)
+    session.mount('http://', a)
+    timeout = 30
+
     global START_DATE
     global END_DATE
     global UNIT_SYSTEM
