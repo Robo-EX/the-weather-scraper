@@ -6,7 +6,7 @@ import re
 # Set Date format like: YYYY, MM, DD
 # Note that FIND_FIRST_DATE uses START_DATE as default start date
 avg_over_min = 1
-days_look_back = 40
+days_look_back = 30
 en_date = datetime.now().strftime('%Y-%m-%dT%H:%M:%S')
 st_date = (datetime.now() - timedelta(days=days_look_back)
            ).strftime('%Y-%m-%dT%H:%M:%S')
